@@ -9,8 +9,8 @@ var orm = {
       cb(results);
     });
   },
-  add: function(table, column, name, cb) {
-    connection.query(`INSERT INTO ${table} (${column}) VALUES (${name})`, (error, result) => {
+  add: function(table, column, value, cb) {
+    connection.query(`INSERT INTO ${table} (${column}) VALUES (${value})`, (error, result) => {
       if (error) {
         console.log(error);
       };
@@ -22,7 +22,6 @@ var orm = {
       if (error) {
         console.log(error);
       };
-
       cb(result);
     })
   }
