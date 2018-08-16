@@ -1,0 +1,38 @@
+<h1>Burger Logger</h1>
+
+<main>
+  <section>
+    <h2>Burgers on the menu</h2>
+    <ul>
+      {{#each burgers}}
+        {{#unless eaten}}
+          {{> menu/burger-block eaten=false}}
+        {{/unless}}
+      {{/each}}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Get cooking!</h2>
+    <form class="burger-form">
+
+      <div class="form-group">
+        <label for="burger-name">What is the name of the burger</label>
+        <input type="text" id="burger-name" name="name">
+      </div>
+
+      <button type="submit">Cook!</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Burgers enjoyed</h2>
+    <ul>
+      {{#each burgers}}
+        {{#if eaten}}
+          {{> menu/burger-block eaten=true}}
+        {{/if}}
+      {{/each}}
+    </ul>
+  </section>
+</main>

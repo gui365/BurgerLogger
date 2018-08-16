@@ -1,0 +1,12 @@
+*, html, body {
+  font-family: "Catamaran", Arial, Helvetica, sans-serif;
+}
+
+main {
+  display: flex;
+  
+}
+
+section {
+  width: 30%;
+}
