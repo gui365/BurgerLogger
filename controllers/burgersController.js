@@ -10,13 +10,17 @@ var controller = function (app) {
         burgers: data
       };
       response.render("index", allBurgers);
+      // console.log(allBurgers);
     })
   });
   
   app.post("/api/burgers", function(request, response) {
-    var nameBurger = request.body.name;
+    var nameBurger = [request.body.name];
+    // console.log(typeof nameBurger);
+    
     burger.add("name", nameBurger, function (data) {
       response.json(data);
+      // console.log(data);
     })
   });
   
@@ -25,6 +29,7 @@ var controller = function (app) {
     var change = `eaten=true`;
     
     burger.update(change, condition, function(result) {
+      // console.log(condition);
       if (result.changedRows == 0) {
         return response.status(404).end();
       } else {

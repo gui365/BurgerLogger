@@ -10,9 +10,11 @@ var orm = {
     });
   },
   add: function(table, column, value, cb) {
-    connection.query(`INSERT INTO ${table} (${column}) VALUES (${value})`, (error, result) => {
+    // console.log(value);
+    connection.query(`INSERT INTO ${table} (${column}) VALUES (?)`, [value], (error, result) => {
       if (error) {
         console.log(error);
+        return;
       };
       cb(result);
     })
