@@ -17,8 +17,8 @@ var orm = {
       cb(result);
     })
   },
-  update: function(table, column, condition, cb) {
-    connection.query(`UPDATE ${table} SET ${column} WHERE ${condition}`, (error, result) => {
+  update: function(table, change, condition, cb) {
+    connection.query(`UPDATE ${table} SET ${change} WHERE ${condition.toString()}`, (error, result) => {
       if (error) {
         console.log(error);
       };

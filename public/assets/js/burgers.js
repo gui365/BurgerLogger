@@ -4,10 +4,10 @@ $(function() {
   event.preventDefault();
 
   var newBurger = {
-    name: $("#burger-name").val().trim(),
-    eaten: false
+    name: $("#burger-name").val().trim()
   };
-
+  console.log(newBurger);
+  
   // POST - Add a burger to the database
   $.ajax("/api/burgers", {
     type: "POST",
