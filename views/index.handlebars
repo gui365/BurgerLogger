@@ -3,17 +3,6 @@
 
 <main>
   <section class="to-center">
-    <h2>Burgers on the menu</h2>
-    <ul>
-      {{#each burgers}}
-        {{#unless eaten}}
-          {{> menu/burger-block eaten=false}}
-        {{/unless}}
-      {{/each}}
-    </ul>
-  </section>
-
-  <section class="to-center">
     <h2>Get cooking!</h2>
     <form class="burger-form">
 
@@ -24,6 +13,17 @@
 
       <button type="submit">Cook!</button>
     </form>
+  </section>
+  
+  <section class="to-center">
+    <h2>Burgers on the menu</h2>
+    <ul>
+      {{#each burgers}}
+        {{#unless eaten}}
+          {{> menu/burger-block eaten=false}}
+        {{/unless}}
+      {{/each}}
+    </ul>
   </section>
 
   <section class="to-center">

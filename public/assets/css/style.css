@@ -1,5 +1,5 @@
 *, html, body {
-  font-family: "Catamaran", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
 main {
@@ -9,5 +9,13 @@ main {
 
 section {
   width: 30%;
-  border: 1px solid black;
+}
+
+h1 {
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.3rem; 
 }
