@@ -1,21 +1,21 @@
-
-  <h1>Burger Logger</h1>
+<header>
+  <img id="bl-logo" src="/assets/images/blogger.png" alt="Burger Logger Logo">
+</header>
 
 <main>
-  <section class="to-center">
+  <section id="cooking-section">
     <h2>Get cooking!</h2>
     <form class="burger-form">
 
       <div class="form-group">
-        <label for="burger-name">What is the name of the burger</label>
+        <label for="burger-name">What is the name of the burger</label><br>
         <input type="text" id="burger-name" name="name">
+        <button type="submit">Cook!</button>
       </div>
-
-      <button type="submit">Cook!</button>
     </form>
   </section>
   
-  <section class="to-center">
+  <section>
     <h2>Burgers on the menu</h2>
     <ul>
       {{#each burgers}}
@@ -26,7 +26,7 @@
     </ul>
   </section>
 
-  <section class="to-center">
+  <section>
     <h2>Burgers enjoyed</h2>
     <ul>
       {{#each burgers}}
