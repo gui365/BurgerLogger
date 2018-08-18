@@ -19,7 +19,7 @@ module.exports = {
 }
 ```
 Then in the command line, run either `node server.js` or `npm start`, and direct your browser to `localhost:3000`.
-You can also use the deployed version of this app at: https://gbarila-ffinder.herokuapp.com/.
+You can also use the deployed version of this app at: https://gbarila-blogger.herokuapp.com/.
 
 ## Functionality
 This is a single page application that allows the user to create sandwiches and add them to the menu. There is a **Devour!** button right next to each sandwich that will move it to a second column named *Enjoyed Burgers*.
