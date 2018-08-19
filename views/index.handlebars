@@ -1,3 +1,6 @@
+<div id="background-top">
+
+</div>
 <header>
   <img id="bl-logo" src="/assets/images/blogger.png" alt="Burger Logger Logo">
 </header>
@@ -7,33 +10,35 @@
     <h2>Get cooking!</h2>
     <form class="burger-form">
 
-      <div class="form-group">
+      <div class="form-group d-flex align-items-center justify-content-center">
         <label for="burger-name">What is the name of the burger</label><br>
         <input type="text" id="burger-name" name="name">
-        <button type="submit">Cook!</button>
+        <button type="submit" id="cook-button">Cook!</button>
       </div>
     </form>
   </section>
   
-  <section>
-    <h2>Burgers on the menu</h2>
-    <ul>
-      {{#each burgers}}
-        {{#unless eaten}}
-          {{> menu/burger-block eaten=false}}
-        {{/unless}}
-      {{/each}}
-    </ul>
-  </section>
+  <div id="menu-bill">
+    <section class="menu-bill menu">
+      <img src="/assets/images/menu.png" alt="Menu" style="height: 5vw; margin-bottom: 2rem;">
+      <ul>
+        {{#each burgers}}
+          {{#unless eaten}}
+            {{> menu/burger-block eaten=false}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </section>
 
-  <section>
-    <h2>Burgers enjoyed</h2>
-    <ul>
-      {{#each burgers}}
-        {{#if eaten}}
-          {{> menu/burger-block eaten=true}}
-        {{/if}}
-      {{/each}}
-    </ul>
-  </section>
+    <section id="receipt" class="menu-bill">
+      <img src="/assets/images/receipt.png" alt="Receipt" style="height: 20vw; margin-bottom: 2rem;">
+      <ul>
+        {{#each burgers}}
+          {{#if eaten}}
+            {{> menu/burger-block eaten=true}}
+          {{/if}}
+        {{/each}}
+      </ul>
+    </section>
+  </div>
 </main>
